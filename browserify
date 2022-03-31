@@ -1,0 +1,72 @@
+var one = require('./one');
+var two = require('./two');
+var myFunctions = require('./three');
+var sub = require('./five').sub;
+var add = require('./five').add;
+var {
+    addd,
+    subb
+} = require('./four');
+myFunctions.myfunc1()
+myFunctions.myfunc2()
+myFunctions.myfunc3()
+
+add(1, 1)
+sub(2, 1)
+addd(1, 1)
+subb(2, 1)
+one();
+two()
+------------------------
+let add = function (a, b) {
+    console.log(a + b);
+ };
+ 
+ let sub = function (a, b) {
+    console.log(a - b);
+ };
+
+ module.exports.add = add;
+ module.exports.sub = sub;
+ -------------
+ const addd =  function (a, b) {
+    console.log(a - b);
+ };
+
+const subb =  function (a, b) {
+    console.log(a - b);
+ };
+
+
+//export modules
+module.exports = {
+    addd,
+    subb 
+}
+-----------------
+ 
+var go = function (){
+    console.log('xxxxx')
+}
+module.exports = go;
+----------------
+var myFunctions = { 
+    myfunc1:function(){
+        console.log(1);
+
+    },
+    myfunc2:function(){
+        console.log(2);
+    },
+    myfunc3:function(){
+        console.log(3);
+    },
+}
+module.exports=myFunctions;
+---------------------
+ 
+var two = function (){
+    console.log('two')
+}
+module.exports = two;
+------------------
